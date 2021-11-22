@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Leetcode: 1. Two Sum | About Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="題目大意： 給予一整數陣列nums以及目標n, 判斷在nums中是否存在兩整數相加結果為n  解題思路： 建一hash map, 其key存放n-nums[i], 而value存放其位置, 如此一來在遇到下一個數j時, 即可判斷nums[j]是否存在, 並回傳其位址  Code:123456789101112class Solution:    def twoSum(self, nums: Lis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode: 1. Two Sum">
+<meta property="og:url" content="https://xyliutw.github.io/2021/11/22/Leetcode-1-Two-Sum/index.html">
+<meta property="og:site_name" content="About Tech">
+<meta property="og:description" content="題目大意： 給予一整數陣列nums以及目標n, 判斷在nums中是否存在兩整數相加結果為n  解題思路： 建一hash map, 其key存放n-nums[i], 而value存放其位置, 如此一來在遇到下一個數j時, 即可判斷nums[j]是否存在, 並回傳其位址  Code:123456789101112class Solution:    def twoSum(self, nums: Lis">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-22T15:05:45.000Z">
+<meta property="article:modified_time" content="2021-11-22T15:11:47.809Z">
+<meta property="article:author" content="Eric">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="About Tech" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">About Tech</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://xyliutw.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Leetcode-1-Two-Sum" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/22/Leetcode-1-Two-Sum/" class="article-date">
+  <time class="dt-published" datetime="2021-11-22T15:05:45.000Z" itemprop="datePublished">2021-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Leetcode: 1. Two Sum
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="題目大意："><a href="#題目大意：" class="headerlink" title="題目大意："></a>題目大意：</h1><ul>
+<li>給予一整數陣列<code>nums</code>以及目標<code>n</code>, 判斷在<code>nums</code>中是否存在兩整數相加結果為n</li>
+</ul>
+<h1 id="解題思路："><a href="#解題思路：" class="headerlink" title="解題思路："></a>解題思路：</h1><ul>
+<li>建一hash map, 其key存放n-nums[i], 而value存放其位置, 如此一來在遇到下一個數j時, 即可判斷nums[j]是否存在, 並回傳其位址</li>
+</ul>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        comp = &#123;&#125; <span class="comment"># hash table of compliments</span></span><br><span class="line">        <span class="keyword">for</span> i, num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):</span><br><span class="line">            <span class="comment">#7</span></span><br><span class="line">            <span class="keyword">if</span> num <span class="keyword">in</span> comp:</span><br><span class="line">                <span class="keyword">return</span> [comp[num], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                comp[target - num] = i</span><br><span class="line">                <span class="comment"># comp[7] = 0</span></span><br><span class="line">                </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://xyliutw.github.io/2021/11/22/Leetcode-1-Two-Sum/" data-id="ckwat50ec0002q4qsf5mi5crz" data-title="Leetcode: 1. Two Sum" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/21/Leetcode-202-Happy-Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Leetcode: 202. Happy Number</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/11/22/Leetcode-1-Two-Sum/">Leetcode: 1. Two Sum</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/21/Leetcode-202-Happy-Number/">Leetcode: 202. Happy Number</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/21/Leetcode-141-Linked-List-Cycle/">Leetcode: 141. Linked List Cycle</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/20/Apache-Kafka/">Apache Kafka</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/20/How-to-set-github-personal-access-token/">How to set github &#39;personal access token&#39;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Eric<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
